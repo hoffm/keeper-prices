@@ -29,7 +29,7 @@
 
   var adpToRound = function(adpRank) {
     if (adpRank === 0) { // not on list
-      return ">20";
+      return "-";
     } else {
       return parseInt((adpRank - 1) / roundSize) + 1
     }
