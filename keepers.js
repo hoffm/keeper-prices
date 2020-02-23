@@ -1,6 +1,5 @@
 (function() {
-  var players = ["Mike Trout", "Jose Altuve", "Nolan Arenado", "Bryce Harper", "Mookie Betts", "Clayton Kershaw", "Giancarlo Stanton", "Trea Turner", "Charlie Blackmon", "Max Scherzer", "Paul Goldschmidt", "Carlos Correa", "Corey Kluber", "Kris Bryant", "Chris Sale", "Manny Machado", "Joey Votto", "Aaron Judge", "Francisco Lindor", "Anthony Rizzo", "Freddie Freeman", "J.D. Martinez", "Jose Ramirez", "Stephen Strasburg", "Cody Bellinger", "George Springer", "Josh Donaldson", "Noah Syndergaard", "Brian Dozier", "Gary Sanchez", "Carlos Carrasco", "Kenley Jansen", "Dee Gordon", "Corey Seager", "Jose Abreu", "Jacob deGrom", "Justin Verlander", "Luis Severino", "Justin Upton", "Alex Bregman", "Craig Kimbrel", "Christian Yelich", "Edwin Encarnacion", "Anthony Rendon", "Marcell Ozuna", "Andrew Benintendi", "Yu Darvish", "Rhys Hoskins", "Nelson Cruz", "Zack Greinke", "Buster Posey", "Robbie Ray", "Dallas Keuchel", "Starling Marte", "Carlos Martinez", "Elvis Andrus", "Chris Archer", "Robinson Cano", "Jonathan Schoop", "Wil Myers", "Byron Buxton", "Khris Davis", "Tommy Pham", "Yoenis Cespedes", "Gerrit Cole", "Aroldis Chapman", "Eric Hosmer", "Xander Bogaerts", "A.J. Pollock", "Jose Quintana", "Willson Contreras", "Aaron Nola", "Andrew McCutchen", "Miguel Sano", "DJ LeMahieu", "Roberto Osuna", "Billy Hamilton", "Corey Knebel", "Jean Segura", "Lorenzo Cain", "James Paxton", "Whit Merrifield", "Masahiro Tanaka", "Jake Arrieta", "Joey Gallo", "Nicholas Castellanos", "Ryan Braun", "Trevor Story", "Daniel Murphy", "Rougned Odor", "Mike Moustakas", "Madison Bumgarner", "Edwin Diaz", "Ken Giles", "Travis Shaw", "Rich Hill", "Kyle Hendricks", "Domingo Santana", "Carlos Santana", "Yasiel Puig", "Ian Desmond", "Ender Inciarte", "Felipe Rivero", "Jose Berrios", "Alex Wood", "Didi Gregorius", "Adam Jones", "Kyle Seager", "Rafael Devers", "Cody Allen", "Luis Castillo", "Eddie Rosario", "Matt Carpenter", "Raisel Iglesias", "Trevor Bauer", "Shohei Ohtani", "Salvador Perez", "Jon Lester", "Miguel Cabrera", "Justin Turner", "Justin Smoak", "Javier Baez", "Eduardo Nunez", "Luke Weaver", "Matt Olson", "Lance McCullers Jr.", "Sonny Gray", "Manuel Margot", "David Price", "Brad Hand", "Marwin Gonzalez", "Wade Davis", "Adrian Beltre", "Sean Doolittle", "Michael Conforto", "Adam Eaton", "Zack Godley", "Nomar Mazara", "Gregory Polanco", "Jay Bruce", "Chris Taylor", "Gio Gonzalez", "Alex Colome", "Brett Gardner", "Evan Gattis", "Jake Lamb", "Ian Happ", "Adam Duvall", "Josh Bell", "Marcus Stroman", "Ryan Zimmerman", "Dylan Bundy", "Ozzie Albies", "Ronald Acuna", "Johnny Cueto", "Greg Bird", "Arodys Vizcaino", "Kevin Gausman", "Evan Longoria", "Kyle Schwarber", "Justin Bour", "Josh Reddick", "Jon Gray", "Trey Mancini", "Kevin Kiermaier", "J.T. Realmuto", "Paul DeJong", "Ian Kinsler", "Danny Duffy", "Yoan Moncada", "Jeurys Familia", "Yadier Molina", "Steven Souza Jr.", "Garrett Richards", "Orlando Arcia", "Aaron Sanchez", "Andrelton Simmons", "Delino DeShields", "Eric Thames", "Chase Anderson", "Taijuan Walker", "Mark Melancon", "Michael Fulmer", "Eugenio Suarez", "Hector Neris", "Cole Hamels", "Danny Salazar", "Andrew Miller", "Avisail Garcia", "Dexter Fowler", "Archie Bradley", "Kenta Maeda", "Charlie Morton", "Odubel Herrera", "Chris Davis", "Brandon Morrow", "Corey Dickerson", "Logan Morrison", "Matt Chapman", "Jacob Faria", "Ben Zobrist", "Julio Teheran", "Kole Calhoun", "Addison Russell", "Jeff Samardzija", "Stephen Piscotty", "Zack Cozart", "Brandon Crawford", "Jameson Taillon", "Joe Panik", "Mike Zunino", "Jackie Bradley Jr.", "Kendrys Morales", "Dansby Swanson", "Max Kepler", "Kelvin Herrera", "Matt Kemp", "David Robertson", "Yangervis Solarte", "Asdrubal Cabrera", "Scooter Gennett", "Carlos Gonzalez", "CC Sabathia", "Kevin Pillar", "Jason Kipnis", "Blake Treinen", "Shin-Soo Choo", "Michael Wacha", "Matt Harvey", "Lance Lynn", "Joakim Soria", "Wilson Ramos", "Yonder Alonso", "Jonathan Villar", "Jose Peraza", "Ervin Santana", "Rick Porcello", "Felix Hernandez", "Tim Beckham", "Fernando Rodney", "Starlin Castro", "Chad Green", "Michael Brantley", "Bradley Zimmer", "Austin Barnes", "Jordan Montgomery", "Maikel Franco", "Aaron Hicks", "Cesar Hernandez", "Albert Pujols", "Jonathan Lucroy", "Dellin Betances", "Alex Cobb", "Michael Taylor", "Zach Davies", "Lucas Giolito", "Randal Grichuk", "Josh Harrison", "Hanley Ramirez", "Tim Anderson", "Brad Peacock", "Jose Martinez", "Todd Frazier", "Shane Greene", "Ryon Healy", "Mike Clevinger", "Jake Odorizzi", "Brian McCann", "Marco Estrada", "Scott Schebler", "Tanner Roark", "David Peralta", "Drew Pomeranz", "Hunter Renfroe", "Aaron Altherr", "Greg Holland", "Mitch Haniger", "Mark Trumbo", "Dominic Leone", "Patrick Corbin", "Cam Bedrosian", "Brad Brach", "J.A. Happ", "Yuli Gurriel", "Welington Castillo", "Blake Parker", "Tyler Chatwood", "Blake", "Yasmani Grandal", "Zach Britton*", "Marcus Semien", "Alex Claudio", "Dinelson Lamet", "Alex Reyes", "Sean Manaea", "Scott Kingery", "Jimmy Nelson", "Chris Devenski", "Brandon Belt", "Austin Hedges", "Amed Rosario", "Eduardo Rodriguez", "Miles Mikolas", "Mike Leake", "Lewis Brinson", "Lucas Duda", "Brad Ziegler", "Luke Gregerson", "Gleyber Torres", "Addison Reed", "Carl Edwards Jr.", "Steven Matz", "Josh Hader", "Matt Shoemaker", "Ryan McMahon", "Mike Foltynewicz", "Chris Owings", "Tommy Kahnle", "Matt Davidson", "German Marquez", "Michael Kopech", "Robinson Chirinos", "Willie Calhoun", "David Dahl", "Luiz Gohara", "Carlos Gomez", "Ivan Nova", "Mallex Smith", "Ryan Madson", "Nick Markakis", "Kolten Wong", "Sean Newcomb", "C.J. Cron", "Nate Jones", "Victor Robles", "Jeimer Candelario", "Reynaldo Lopez", "Russell Martin", "Jedd Gyorko", "Brandon Drury", "Joe Mauer", "Adam Wainwright", "Jesse Winker", "Walker Buehler", "Collin McHugh", "Jose Urena", "Travis d'Arnaud", "Jack Flaherty", "Cameron Maybin", "A.J. Minter"]
-
+  var players = ["Mike Trout", "Mookie Betts", "Max Scherzer", "Jose Ramirez", "J.D. Martinez", "Nolan Arenado", "Chris Sale", "Christian Yelich", "Jacob deGrom", "Jose Altuve", "Trea Turner", "Francisco Lindor", "Alex Bregman", "Manny Machado", "Bryce Harper", "Ronald Acuna Jr.", "Giancarlo Stanton", "Justin Verlander", "Corey Kluber", "Javier Baez", "Aaron Judge", "Freddie Freeman", "Paul Goldschmidt", "Aaron Nola", "Gerrit Cole", "Charlie Blackmon", "Trevor Story", "Kris Bryant", "Blake Snell", "Anthony Rizzo", "Trevor Bauer", "Juan Soto", "Noah Syndergaard", "Andrew Benintendi", "Starling Marte", "Whit Merrifield", "Carlos Carrasco", "Cody Bellinger", "Anthony Rendon", "Xander Bogaerts", "Walker Buehler", "Rhys Hoskins", "Khris Davis", "Patrick Corbin", "Carlos Correa", "Joey Votto", "Ozzie Albies", "George Springer", "James Paxton", "J.T. Realmuto", "Edwin Diaz", "Gleyber Torres", "Nicholas Castellanos", "Zack Greinke", "Lorenzo Cain", "Kenley Jansen", "Eugenio Suarez", "Stephen Strasburg", "Matt Carpenter", "Mitch Haniger", "Daniel Murphy", "Clayton Kershaw", "Blake Treinen", "Jean Segura", "Vladimir Guerrero Jr.", "Aroldis Chapman", "Mike Clevinger", "Luis Severino", "Jameson Taillon", "Marcell Ozuna", "Eddie Rosario", "Tommy Pham", "Jack Flaherty", "Corey Seager", "Gary Sanchez", "Jose Abreu", "Michael Conforto", "Miguel Andujar", "Jose Berrios", "Nelson Cruz", "Roberto Osuna", "David Price", "Justin Turner", "Jesus Aguilar", "Yasiel Puig", "Justin Upton", "Brad Hand", "Robinson Cano", "Felipe Vazquez", "Madison Bumgarner", "Craig Kimbrel", "Matt Chapman", "Dee Gordon", "A.J. Pollock", "Joey Gallo", "Mike Foltynewicz", "Jonathan Villar", "Andrew McCutchen", "Zack Wheeler", "Willson Contreras", "David Dahl", "Scooter Gennett", "Edwin Encarnacion", "Aaron Hicks", "Masahiro Tanaka", "Mike Moustakas", "Travis Shaw", "Miles Mikolas", "Michael Brantley", "Kirby Yates", "David Peralta", "Josh Hader", "Adalberto Mondesi", "Josh Donaldson", "Jose Peraza", "German Marquez", "Buster Posey", "Wil Myers", "Yasmani Grandal", "Charlie Morton", "Mallex Smith", "Yadier Molina", "Brian Dozier", "Chris Archer", "David Robertson", "Rougned Odor", "Ender Inciarte", "Raisel Iglesias", "Sean Doolittle", "Victor Robles", "Luis Castillo", "J.A. Happ", "Stephen Piscotty", "Robbie Ray", "Eloy Jimenez", "Cole Hamels", "Carlos Santana", "Eric Hosmer", "Ian Desmond", "Rick Porcello", "Kyle Hendricks", "Matt Olson", "Jose Leclerc", "Amed Rosario", "Eduardo Rodriguez", "Jurickson Profar", "Yu Darvish", "Max Muncy", "Tim Anderson", "Ken Giles", "Wade Davis", "Wilson Ramos", "Rafael Devers", "Miguel Cabrera", "Nomar Mazara", "Corey Dickerson", "Yoan Moncada", "Elvis Andrus", "Shane Bieber", "Brandon Nimmo", "Billy Hamilton", "Andrelton Simmons", "Eduardo Escobar", "Kyle Schwarber", "Jose Quintana", "Shohei Ohtani", "Dallas Keuchel", "Adam Eaton", "Andrew Heaney", "Nick Pivetta", "Nathan Eovaldi", "Corey Knebel", "Yusei Kikuchi", "Jon Lester", "Jose Alvarado", "Jake Arrieta", "Paul DeJong", "Kenta Maeda", "Rich Hill", "Yuli Gurriel", "Asdrubal Cabrera", "Byron Buxton", "Ryan Braun", "Harrison Bader", "Cody Allen", "Cesar Hernandez", "Will Smith", "Jesse Winker", "Jonathan Schoop", "Jackie Bradley Jr.", "Justin Smoak", "Max Kepler", "Andrew Miller", "Jose Martinez", "Hunter Renfroe", "Kevin Gausman", "Collin McHugh", "Odubel Herrera", "Kyle Freeland", "Marwin Gonzalez", "Jon Gray", "Chris Taylor", "Jorge Polanco", "Marcus Semien", "Ross Stripling", "Tyler Glasnow", "Arodys Vizcaino", "Marco Gonzales", "Mike Zunino", "Tyler Skaggs", "DJ LeMahieu", "Joey Lucchesi", "Matt Barnes", "Josh Bell", "Joe Musgrove", "Danny Jansen", "Austin Meadows", "Hyun-Jin Ryu", "Nick Markakis", "Ketel Marte", "Jake Bauers", "Brian Anderson", "Luke Voit", "Lourdes Gurriel Jr.", "Archie Bradley", "Jordan Hicks", "C.J. Cron", "Nick Senzel", "Sean Newcomb", "Francisco Cervelli", "Trey Mancini", "Hunter Strickland", "Kyle SeagerIL10", "Adam Frazier", "Julio Teheran", "Alex Wood", "Kevin Pillar", "Jay Bruce", "Wilmer Flores", "Jake Lamb", "Shin-Soo Choo", "Jhoulys Chacin", "Randal Grichuk", "Dellin Betances", "Joc Pederson", "Jed Lowrie", "Carlos MartinezIL10", "Ben Zobrist", "Evan Longoria", "Domingo Santana"]
   var roundSize = 11;
 
   var adpToPrice = function(adpRank){
@@ -35,13 +34,22 @@
     }
   };
 
-  var playerTags = _.filter(jQuery(".playertablePlayerName a"), function(tag){
-    return tag.text !== "";
-  });
+  var playerTags = [].slice.call(document.getElementsByClassName('player-column__athlete'))
 
-  var playerPrices = _.map(playerTags, function(tag){
-    var name = tag.text,
-      adpRank = _.indexOf(players, name) + 1;
+  var playerNames = playerTags.map((tag) => tag.textContent.replace(/DTD$/, ""))
+
+  const comperator = (valueFunc) => (a, b) => {
+    const aVal = valueFunc(a);
+    const bVal = valueFunc(b);
+
+    if (aVal > bVal) return 1;
+    if (bVal > aVal) return -1;
+  
+    return 0;
+  }
+
+  var playerPrices = playerNames.map(function(name){
+    adpRank = players.indexOf(name) + 1;
 
     return {
       name: name,
@@ -51,26 +59,31 @@
     }
   });
 
-  playerPrices = _.sortBy(playerPrices, function(player){
-    var nameParts = player.name.split(" "),
-      nameCount = nameParts.length,
-      lastName = nameParts[nameCount - 1];
+  playerPrices.sort(
+    comperator(
+      (player) => {
+        var nameParts = player.name.split(" "),
+          nameCount = nameParts.length,
+          lastName = nameParts[nameCount - 1];
 
-    return lastName;
-  });
+        return lastName.toLowerCase();
+      }
+    )
+  ).sort(
+    comperator(
+      (player) => {
+        return -player.keeperPrice;
+      }
+    )
+  ).sort(
+    comperator(
+      (player) => {
+        var rank = player.adpRank;
+        return (rank === 0 ? players.length : player.adpRank);      }
+    )
+  );
 
-  playerPrices = _.sortBy(playerPrices, function(player){
-    var price = player.keeperPrice;
-
-    return -player.keeperPrice;
-  });
-
-  playerPrices = _.sortBy(playerPrices, function(player){
-    var rank = player.adpRank;
-    return (rank === 0 ? players.length : player.adpRank);
-  });
-
-  var playerRows = _.map(playerPrices, function(player){
+  var playerRows = playerPrices.map(function(player){
     var row = "<tr>\
               <td style='padding-left: 5px;'>" + player.name + "</td> \
               <td style='padding-left: 35px;'>" + (player.adpRank === 0 ? ">" + String(players.length) : String(player.adpRank) ) + "</td> \
@@ -94,8 +107,7 @@
     "<th style='width: 90px'>Price</th>" +
     "</tr>" +
     playerRows.join("\n") +
-    "</table>"
+    "</table>";
 
-  jQuery("body").replaceWith(outputHtml)
-
+    document.getElementsByTagName('body')[0].innerHTML = outputHtml;
 })();
